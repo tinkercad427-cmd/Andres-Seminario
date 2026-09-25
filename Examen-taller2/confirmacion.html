@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Aroma Café - Confirmación de pedido">
+    <title>Aroma Café | Pedido confirmado</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <header class="site-header">
+        <div class="container nav-container">
+            <a href="catalogo.html" class="logo">
+                <span class="logo-icon">☕</span>
+                <span>Aroma<span class="logo-accent">Café</span></span>
+            </a>
+
+            <nav class="main-nav">
+                <a href="catalogo.html" class="nav-link">Catálogo</a>
+                <a href="carrito.html" class="cart-link">
+                    🛒 Carrito
+                    <span id="cart-count" class="cart-count">0</span>
+                </a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="page-main confirmation-main">
+        <div class="container">
+            <section class="confirmation-card">
+                <div class="success-icon">✓</div>
+
+                <span class="eyebrow">¡PEDIDO RECIBIDO!</span>
+                <h1>¡Gracias por tu compra!</h1>
+                <p class="confirmation-lead">
+                    Tu pedido fue confirmado correctamente.
+                    Estamos preparando todo con mucho cariño.
+                </p>
+
+                <div class="order-number-box">
+                    <span>Número de pedido</span>
+                    <strong id="order-number">—</strong>
+                </div>
+
+                <div class="confirmation-grid">
+                    <section class="confirmation-section">
+                        <div class="section-icon">📦</div>
+                        <div>
+                            <h2>Resumen del pedido</h2>
+                            <div id="confirmation-items"></div>
+                        </div>
+                    </section>
+
+                    <section class="confirmation-section customer-section">
+                        <div class="section-icon">👤</div>
+                        <div>
+                            <h2>Datos del cliente</h2>
+
+                            <div class="customer-data">
+                                <div>
+                                    <span>Nombre</span>
+                                    <strong id="customer-name-confirmation">—</strong>
+                                </div>
+
+                                <div>
+                                    <span>Teléfono</span>
+                                    <strong id="customer-phone-confirmation">—</strong>
+                                </div>
+
+                                <div>
+                                    <span>Forma de entrega</span>
+                                    <strong id="delivery-confirmation">—</strong>
+                                </div>
+
+                                <div id="address-confirmation-row">
+                                    <span>Dirección</span>
+                                    <strong id="address-confirmation">—</strong>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                </div>
+
+                <div class="confirmation-total">
+                    <div>
+                        <span>Subtotal</span>
+                        <strong id="confirmation-subtotal">$0,00</strong>
+                    </div>
+
+                    <div id="confirmation-discount-row" class="confirmation-discount hidden">
+                        <span>Descuento</span>
+                        <strong id="confirmation-discount">-$0,00</strong>
+                    </div>
+
+                    <div class="grand-total">
+                        <span>Total pagado</span>
+                        <strong id="confirmation-total">$0,00</strong>
+                    </div>
+                </div>
+
+                <a href="catalogo.html" class="btn btn-primary">
+                    Volver al catálogo
+                </a>
+            </section>
+        </div>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container footer-content">
+            <div>
+                <div class="logo footer-logo">
+                    <span class="logo-icon">☕</span>
+                    <span>Aroma<span class="logo-accent">Café</span></span>
+                </div>
+                <p>Café hecho con pasión, servido con cariño.</p>
+            </div>
+            <p>© 2026 Aroma Café</p>
+        </div>
+    </footer>
+
+    <script src="js/utils.js"></script>
+    <script src="js/products.js"></script>
+    <script src="js/carts.js"></script>
+</body>
+</html>

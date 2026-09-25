@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Cafetería Aroma - Catálogo de productos">
+    <title>Aroma Café | Catálogo</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <header class="site-header">
+        <div class="container nav-container">
+            <a href="catalogo.html" class="logo">
+                <span class="logo-icon">☕</span>
+                <span>Aroma<span class="logo-accent">Café</span></span>
+            </a>
+
+            <nav class="main-nav">
+                <a href="catalogo.html" class="nav-link active">Catálogo</a>
+                <a href="carrito.html" class="cart-link">
+                    🛒 Carrito
+                    <span id="cart-count" class="cart-count">0</span>
+                </a>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="hero">
+            <div class="container hero-content">
+                <div>
+                    <span class="eyebrow">☕ CAFÉ • SABOR • MOMENTOS</span>
+                    <h1>Tu café favorito,<br><span>en un solo lugar.</span></h1>
+                    <p>
+                        Descubre cafés recién preparados, pastelería artesanal
+                        y deliciosas opciones para acompañar tu día.
+                    </p>
+                    <a href="#catalogo" class="btn btn-primary">Ver catálogo</a>
+                </div>
+
+                <div class="hero-coffee" aria-hidden="true">
+                    <div class="coffee-cup">
+                        <div class="coffee"></div>
+                        <div class="cup-handle"></div>
+                    </div>
+                    <span class="steam steam-1"></span>
+                    <span class="steam steam-2"></span>
+                    <span class="steam steam-3"></span>
+                </div>
+            </div>
+        </section>
+
+        <section id="catalogo" class="catalog-section container">
+            <div class="section-heading">
+                <div>
+                    <span class="eyebrow">NUESTRO MENÚ</span>
+                    <h2>Elegí tu favorito</h2>
+                </div>
+                <p id="products-summary" class="products-summary"></p>
+            </div>
+
+            <div class="filters">
+                <div class="search-wrapper">
+                    <span>⌕</span>
+                    <input
+                        type="search"
+                        id="search-input"
+                        placeholder="Buscar por nombre..."
+                        aria-label="Buscar productos"
+                    >
+                </div>
+
+                <div class="category-wrapper">
+                    <label for="category-filter">Categoría</label>
+                    <select id="category-filter">
+                        <option value="todos">Todas</option>
+                    </select>
+                </div>
+            </div>
+
+            <div id="products-grid" class="products-grid"></div>
+
+            <div id="empty-results" class="empty-state hidden">
+                <div class="empty-icon">🔎</div>
+                <h3>No encontramos productos</h3>
+                <p>Probá con otro nombre o seleccioná una categoría diferente.</p>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container footer-content">
+            <div>
+                <div class="logo footer-logo">
+                    <span class="logo-icon">☕</span>
+                    <span>Aroma<span class="logo-accent">Café</span></span>
+                </div>
+                <p>Café hecho con pasión, servido con cariño.</p>
+            </div>
+            <p>© 2026 Aroma Café</p>
+        </div>
+    </footer>
+
+    <div id="toast-container" class="toast-container"></div>
+
+    <script src="js/utils.js"></script>
+    <script src="js/products.js"></script>
+    <script src="js/carts.js"></script>
+</body>
+</html>
